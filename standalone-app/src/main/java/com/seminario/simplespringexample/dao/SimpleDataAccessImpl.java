@@ -15,6 +15,8 @@ public class SimpleDataAccessImpl implements ISimpleDataAccess {
 	public SimpleDataAccessImpl(@Value(value = "${database.url}") final String databaseUrl) {
 		super();
 		this.databaseUrl = databaseUrl;
+
+		System.out.println("SimpleDataAccessImpl()");
 	}
 
 	@Override
