@@ -3,14 +3,14 @@ package com.seminario.simplespringexample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.seminario.simplespringexample.dao.ISimpleDataAccess;
+import com.seminario.simplespringexample.dao.IDataAccess;
 import com.seminario.simplespringexample.model.User;
 
 @Component
 public class EntryPoint {
 
 	@Autowired
-	private ISimpleDataAccess dataAccess;
+	private IDataAccess dataAccess;
 
 	public EntryPoint() {
 		System.out.println("EntryPoint()");

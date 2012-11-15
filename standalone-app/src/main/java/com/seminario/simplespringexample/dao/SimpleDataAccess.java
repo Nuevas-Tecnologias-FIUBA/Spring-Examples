@@ -7,16 +7,15 @@ import org.springframework.stereotype.Component;
 import com.seminario.simplespringexample.model.User;
 
 @Component
-public class SimpleDataAccessImpl implements ISimpleDataAccess {
+// @Scope("prototype")
+public class SimpleDataAccess implements IDataAccess {
 
 	private final String databaseUrl;
 
 	@Autowired
-	public SimpleDataAccessImpl(@Value(value = "${database.url}") final String databaseUrl) {
-		super();
-		this.databaseUrl = databaseUrl;
-
+	public SimpleDataAccess(@Value("${database.url}") final String databaseUrl) {
 		System.out.println("SimpleDataAccessImpl()");
+		this.databaseUrl = databaseUrl;
 	}
 
 	@Override

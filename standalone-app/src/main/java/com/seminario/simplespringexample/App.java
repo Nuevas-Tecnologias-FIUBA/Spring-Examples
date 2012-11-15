@@ -8,7 +8,9 @@ public class App {
 	public static void main(String[] args) {
 		final AbstractApplicationContext appContext = new ClassPathXmlApplicationContext(
 				"classpath:applicationContext.xml");
+
 		start(appContext);
+
 		appContext.close();
 	}
 
